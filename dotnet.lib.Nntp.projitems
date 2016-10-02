@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{1EFC2D34-5DBB-4E88-AB46-81A2A16D7EF8}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>lib.Nntp</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)lib.Nntp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)lib.Nntp\LineReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)lib.Nntp\Message.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)lib.Nntp\CrossReference.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)lib.Nntp\MessageDate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)lib.Nntp\CrossReferenceUnitTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)lib.Nntp\Group.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)lib.Nntp\LineIterator.cs" />
+  </ItemGroup>
+</Project>

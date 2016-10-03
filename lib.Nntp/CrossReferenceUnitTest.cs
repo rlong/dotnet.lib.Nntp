@@ -5,6 +5,8 @@ using lib.CoreAnnex.log;
 
 namespace lib.Nntp
 {
+
+	[TestFixture]
 	public class CrossReferenceUnitTest
 	{
 		private static Log log = Log.getLog(typeof(CrossReferenceUnitTest));
@@ -25,7 +27,7 @@ namespace lib.Nntp
 		{
 			CrossReference xref = CrossReference.Build("Xref: news.gmane.org gmane.comp.python.committers:2800");
 			Assert.NotNull(xref);
-			log.debug(xref.ToJsonArray().ToString(), "xref.ToJsonArray().ToString()");
+			log.Debug(xref.ToJsonArray().ToString(), "xref.ToJsonArray().ToString()");
 		}
 
 	}

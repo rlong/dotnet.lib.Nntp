@@ -19,5 +19,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)lib.Nntp\CrossReferenceUnitTest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)lib.Nntp\Group.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)lib.Nntp\LineIterator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)lib.Nntp\MessageDateUnitTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)lib.Nntp\MessageIterator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)lib.Nntp\MessageUnitTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)lib.Nntp\NntpConnection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)lib.Nntp\ReturnCode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)lib.Nntp\GroupIterator.cs" />
   </ItemGroup>
 </Project>

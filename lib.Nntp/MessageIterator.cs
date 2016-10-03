@@ -1,0 +1,62 @@
+﻿using System;
+using System.Collections;
+
+namespace lib.Nntp
+{
+
+	// vvv http://stackoverflow.com/questions/11296810/how-do-i-implement-ienumerablet
+	public class MessageIterator : IEnumerable, IEnumerator	{
+
+
+		LineIterator _lineIterator;
+
+		public MessageIterator( LineIterator lineIterator)
+		{
+			_lineIterator = lineIterator;
+		}
+
+
+		public Message Current { get; private set; }
+
+		#region IEnumerable
+
+		public IEnumerator GetEnumerator()
+		{
+			return this;
+		}
+
+		#endregion
+
+		#region IEnumerator
+
+		Object IEnumerator.Current
+		{
+			get
+			{
+				return Current;
+			}
+		}
+
+		public bool MoveNext()
+		{
+			if (_lineIterator.HasNext())
+			{
+				Current = new Message(_lineIterator.ReadLine());
+				return true;
+			}
+			Current = null;
+			return false;
+		}
+
+		public void Reset()
+		{
+			// vvv http://stackoverflow.com/questions/1468170/why-the-reset-method-on-enumerator-class-must-throw-a-notsupportedexception
+			throw new NotSupportedException();
+			// ^^^ http://stackoverflow.com/questions/1468170/why-the-reset-method-on-enumerator-class-must-throw-a-notsupportedexception
+		}
+
+		#endregion
+	}
+	// ^^^ http://stackoverflow.com/questions/11296810/how-do-i-implement-ienumerablet
+
+}

@@ -54,7 +54,7 @@ namespace lib.Nntp
 			}
 		}
 
-		static String[] BuildReferences(String references)
+		public static String[] BuildReferences(String references)
 		{
 			// no references ? 
 			if ("".Equals(references) ) {
@@ -73,15 +73,15 @@ namespace lib.Nntp
 		public void Debug()
 		{
 
-			log.debug(Raw, "Raw");
+			log.Debug(Raw, "Raw");
 			log.debug(ArticleNumber, "ArticleNumber");
-			log.debug(Subject, "Subject");
-			log.debug(From, "From");
+			log.Debug(Subject, "Subject");
+			log.Debug(From, "From");
 			log.debug(Date.UtcTime, "Date.UtcTime");
-			log.debug(MessageId, "MessageId");
+			log.Debug(MessageId, "MessageId");
 			for (int i = 0, count = References.Length; i < count; i++)
 			{
-				log.debug(References[i], "References[" + i + "]");
+				log.Debug(References[i], "References[" + i + "]");
 			}
 
 			log.debug(Bytes, "Bytes");
